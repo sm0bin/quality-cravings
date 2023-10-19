@@ -1,35 +1,40 @@
 import { Link } from "react-router-dom";
 
-const Login = () => {
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-        const form = e.target;
-        console.log(form);
-    }
-
+const SignUp = () => {
     return (
         <div className="hero min-h-screen bg-base-100">
             <div className="hero-content w-full flex-col lg:flex-row-reverse">
                 <div className="card flex-shrink-0 w-full max-w-md shadow border bg-base-100 p-6 gap-5">
-                    <form onSubmit={handleLogin} className="card-body p-0">
+                    <form className="card-body p-0">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text font-bold">Name</span>
+                            </label>
+                            <input type="text" placeholder="Name" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text font-bold">Photo URL</span>
+                            </label>
+                            <input type="text" placeholder="Photo URL" className="input input-bordered" required />
+                        </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-bold">Email</span>
                             </label>
-                            <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                            <input type="email" placeholder="Email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-bold">Password</span>
                             </label>
-                            <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                            <input type="password" placeholder="Password" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-neutral">Login</button>
+                            <button className="btn btn-neutral">Sign Up</button>
                         </div>
                     </form>
-                    <h4 className="font-medium text-lg">Don&apos;t Have an Account? <Link to="/sign-up" className="text-indigo-500 link link-hover">Sign Up</Link></h4>
+                    <h4 className="font-medium text-lg">Already Have an Account? <Link to="/login" className="text-indigo-500 link link-hover">Login</Link></h4>
                     <div className="flex items-center gap-4">
                         <hr className="border w-full" />
                         <p>Or</p>
@@ -45,4 +50,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignUp;

@@ -6,13 +6,13 @@ const Home = () => {
     const loadedBrands = useLoaderData();
     return (
         <div>
-            <section className="hero min-h-screen" style={{ backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)' }}>
-                <div className="hero-overlay bg-opacity-60"></div>
+            <section className="hero min-h-screen" style={{ backgroundImage: 'url("https://source.unsplash.com/burger-with-fries-8l8Yl2ruUsg/1920x1280")' }}>
+                <div className="hero-overlay bg-orange-600/10"></div>
                 <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-neutral">Get Started</button>
+                    <div className="">
+                        <h1 className="mb-5 text-5xl font-bold">Welcome to Quality Cravings</h1>
+                        <p className="mb-5 text-xl">Your Destination for Premium Food and Beverages.</p>
+                        <button className="btn btn-neutral font-semibold bg-orange-500 hover:scale-110 hover:bg-orange-500 text-white shadow-xl">Shop Now</button>
                     </div>
                 </div>
             </section>
