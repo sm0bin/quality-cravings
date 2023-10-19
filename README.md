@@ -1,8 +1,8 @@
-Image
-Name
-Brand Name
-Type
-Price
-Short description
-Rating
+imageUrl
+name
+brandName
+type
+price
+rating
+productDescription
 Add button

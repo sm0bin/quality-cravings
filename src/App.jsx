@@ -6,7 +6,9 @@ const App = () => {
   return (
     <div>
       <Header></Header>
+      {/* <div className="pt-8"> */}
       <Outlet></Outlet>
+      {/* </div> */}
       <Footer></Footer>
     </div>
   );

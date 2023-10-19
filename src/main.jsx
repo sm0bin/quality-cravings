@@ -9,6 +9,8 @@ import App from "./App";
 import Home from "./pages/shared/Home";
 import Login from "./pages/auth/Login";
 import AddProduct from "./pages/shared/AddProduct";
+import BrandProducts from "./pages/shared/BrandProducts";
+import ProductDetails from "./pages/shared/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,16 @@ const router = createBrowserRouter([
       {
         path: "/products/new",
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/brands/:brandId",
+        element: <BrandProducts></BrandProducts>,
+        loader: ({ params }) => fetch(`http://localhost:5500/brands/${params.brandId}`),
+      },
+      {
+        path: "/brands/:brandId/products/:productId",
+        element: <ProductDetails></ProductDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5500/brands/${params.brandId}/products/${params.productId}`),
       },
     ]
   },
