@@ -8,6 +8,7 @@ import "./index.css";
 import App from "./App";
 import Home from "./pages/shared/Home";
 import Login from "./pages/auth/Login";
+import AddProduct from "./pages/shared/AddProduct";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/products/new",
+        element: <AddProduct></AddProduct>,
       },
     ]
   },
