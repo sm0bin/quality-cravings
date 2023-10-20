@@ -51,10 +51,10 @@ export const Testimonials = () => {
     }, [emblaApi])
 
     return (
-        <div className="py-32">
+        <div className="my-32">
             <section className="">
-                <div className=" w-4/5 mx-auto">
-                    <h1 className="mb-12 font-bold text-5xl text-gray-800 text-center">
+                <div className="max-w-7xl mx-auto">
+                    <h1 className="mb-16 font-bold text-5xl text-gray-800 text-center">
                         What Our Clients Say
                     </h1>
 
@@ -65,7 +65,7 @@ export const Testimonials = () => {
                                     className="embla__slide flex-[0_0_33%] md:flex-[0_0_32%] mr-4 min-w-0
                         bg-white shadow-sm border-solid border-2 
                             border-gray-200 
-                            rounded-lg"
+                            rounded-2xl"
                                 >
                                     <div
                                         className="w-full flex flex-col bg-white px-6 py-6

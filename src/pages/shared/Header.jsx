@@ -1,6 +1,16 @@
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
+import { toast } from "react-hot-toast";
 
 const Header = () => {
+    const { user, logoutUser } = useContext(AuthContext);
+    console.log(user);
+
+    const handleLogout = () => {
+        logoutUser();
+        toast.success('Logout Successful!');
+    }
 
     {/* Home, Add Product, My Cart, and Login. */ }
     const navLinks = <>
@@ -26,7 +36,7 @@ const Header = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <NavLink to="/" className="btn btn-ghost normal-case text-xl">Quality Cravings</NavLink>
+                <NavLink to="/" className="btn btn-ghost normal-case font-bold text-xl">Quality Cravings</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -34,7 +44,20 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <NavLink to="/login" className="btn btn-neutral">Login</NavLink>
+                {
+                    user ?
+                        <div className="flex items-center gap-3">
+                            <div className="avatar">
+                                <div className="w-12 mask mask-squircle">
+                                    <img src={user.photoURL} />
+                                </div>
+                            </div>
+                            <h3 className="font-semibold text-xl">{user.displayName}</h3>
+                            <button onClick={handleLogout} className="btn btn-neutral">Logout</button>
+                        </div>
+                        :
+                        <NavLink to="/login" className="btn btn-neutral">Login</NavLink>
+                }
             </div>
         </div>
     );
