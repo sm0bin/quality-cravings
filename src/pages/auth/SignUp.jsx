@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
-import { toast } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Toaster, toast } from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const SignUp = () => {
-    const { signUpUser, googleSignIn, updateUser } = useContext(AuthContext);
+    const { signUpUser, googleSignIn, updateUser, logoutUser } = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState("");
+    const navigate = useNavigate();
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -66,6 +67,14 @@ const SignUp = () => {
                         }
                     });
                 form.reset();
+                logoutUser()
+                    .then(result => {
+                        navigate("/login");
+                        console.log(result);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
             })
             .catch(error => {
                 console.log(error);
@@ -79,7 +88,7 @@ const SignUp = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user);
-                toast.success('Login Successful!');
+                toast.success('Google Sign In Successful!');
             })
             .catch(error => {
                 console.log(error);
@@ -88,6 +97,7 @@ const SignUp = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-100">
+            <Toaster></Toaster>
             <div className="hero-content w-full flex-col lg:flex-row-reverse">
                 <div className="card flex-shrink-0 w-full max-w-md shadow border bg-base-100 p-6 gap-5">
                     <form onSubmit={handleSignUp} className="card-body p-0">

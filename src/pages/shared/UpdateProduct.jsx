@@ -4,20 +4,21 @@ import Swal from "sweetalert2";
 const UpdateProduct = () => {
     const loadedProduct = useLoaderData();
     const {
+        _id,
         name,
-        image_url,
-        brand_name,
+        imageUrl,
+        brandName,
         type,
         price,
         rating,
-        short_description,
+        shortDescription,
     } = loadedProduct;
 
-    const handleAddProduct = e => {
+    const handleUpdateProduct = e => {
         e.preventDefault();
         const form = e.currentTarget;
 
-        const newProduct = {
+        const updateProduct = {
             name: form.name.value,
             imageUrl: form.imageUrl.value,
             brandName: form.brandName.value,
@@ -26,14 +27,14 @@ const UpdateProduct = () => {
             rating: form.rating.value,
             productDescription: form.productDescription.value,
         }
-        console.log(newProduct);
+        console.log(updateProduct);
 
-        fetch('http://localhost:5500/products/', {
+        fetch(`http://localhost:5500/products/${_id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(newProduct)
+            body: JSON.stringify(updateProduct)
         })
             .then(res => res.json())
             .then(data => {
@@ -56,7 +57,7 @@ const UpdateProduct = () => {
                 <div className="hero-content w-full flex-col">
                     <h2 className="font-bold text-5xl text-center mb-12">Update Product</h2>
                     <div className="card flex-shrink-0 w-full shadow border bg-base-100">
-                        <form onSubmit={handleAddProduct} className="card-body ">
+                        <form onSubmit={handleUpdateProduct} className="card-body ">
                             <div className="grid grid-cols-2 gap-6">
 
 
@@ -70,13 +71,13 @@ const UpdateProduct = () => {
                                     <label className="label">
                                         <span className="label-text font-bold">Image</span>
                                     </label>
-                                    <input type="text" name="imageUrl" defaultValue={image_url} placeholder="Image URL" className="input input-bordered" required />
+                                    <input type="text" name="imageUrl" defaultValue={imageUrl} placeholder="Image URL" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Brand Name</span>
                                     </label>
-                                    <input type="text" name="brandName" defaultValue={brand_name} placeholder="Brand Name" className="input input-bordered" required />
+                                    <input type="text" name="brandName" defaultValue={brandName} placeholder="Brand Name" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -101,7 +102,7 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Product Description</span>
                                 </label>
-                                <input type="text" name="productDescription" defaultValue={short_description} placeholder="Product Description" className="input input-bordered" required />
+                                <input type="text" name="productDescription" defaultValue={shortDescription} placeholder="Product Description" className="input input-bordered" required />
                             </div>
 
                             <div className="form-control mt-6">

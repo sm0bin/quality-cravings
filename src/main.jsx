@@ -16,6 +16,7 @@ import SignUp from "./pages/auth/SignUp";
 import AuthProvider from "./providers/AuthProvider";
 import ErrorPage from "./pages/ErrorPage";
 import UpdateProduct from "./pages/shared/UpdateProduct";
+import PrivateRoute from "./routes/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -43,17 +44,17 @@ const router = createBrowserRouter([
       {
         path: "/brands/:brandId",
         element: <BrandProducts></BrandProducts>,
-        loader: ({ params }) => fetch(`http://localhost:5500/brands/${params.brandId}`),
+        loader: ({ params }) => fetch(`http://localhost:5500/brands/${params.brandId}/products`),
       },
       {
         path: "/brands/:brandId/products/:productId",
-        element: <ProductDetails></ProductDetails>,
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5500/brands/${params.brandId}/products/${params.productId}`),
       },
       {
-        path: "/brands/:brandId/products/:productId/new",
-        element: <UpdateProduct></UpdateProduct>,
-        loader: ({ params }) => fetch(`http://localhost:5500/brands/${params.brandId}/products/${params.productId}`),
+        path: "/products/:productId/edit",
+        element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5500/products/${params.productId}`),
       },
       {
         path: "/cart",
