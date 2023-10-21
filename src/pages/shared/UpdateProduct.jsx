@@ -25,7 +25,7 @@ const UpdateProduct = () => {
             type: form.type.value,
             price: form.price.value,
             rating: form.rating.value,
-            productDescription: form.productDescription.value,
+            shortDescription: form.shortDescription.value,
         }
         console.log(updateProduct);
 
@@ -102,7 +102,7 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Product Description</span>
                                 </label>
-                                <input type="text" name="productDescription" defaultValue={shortDescription} placeholder="Product Description" className="input input-bordered" required />
+                                <input type="text" name="shortDescription" defaultValue={shortDescription} placeholder="Product Description" className="input input-bordered" required />
                             </div>
 
                             <div className="form-control mt-6">

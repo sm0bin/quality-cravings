@@ -38,7 +38,7 @@ const Home = () => {
                 <Link to="/login">
                     <button className="btn btn-neutral font-semibold bg-orange-500 hover:scale-110 hover:bg-orange-500 text-white shadow-xl border-none">Shop Now</button>
                 </Link>
-                <img className="absolute -bottom-12 right-8 h-64" src="/certified-1.svg" alt="" />
+                <img className="absolute -bottom-16 md:-bottom-12 -right-12 md:-right-8 lg:right-8 h-64 scale-75 lg:scale-100" src="/certified-1.svg" alt="" />
             </section>
 
             <Testimonials></Testimonials>

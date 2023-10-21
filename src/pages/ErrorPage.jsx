@@ -1,15 +1,10 @@
-import { useNavigate, useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 import Footer from "./shared/Footer";
 import Header from "./shared/Header";
 
 export default function ErrorPage() {
     const error = useRouteError();
-    const navigate = useNavigate();
-
     console.error(error);
-    const handleGoHome = () => {
-        navigate("/");
-    }
 
     return (
         <>
@@ -22,7 +17,7 @@ export default function ErrorPage() {
                         <i>{error.statusText || error.message}</i>
                     </h4>
                 </div>
-                <button onClick={handleGoHome} className="btn btn-neutral">Go Home</button>
+                <Link to="/" className="btn btn-neutral">Go Home</Link>
             </div>
             <Footer></Footer>
         </>

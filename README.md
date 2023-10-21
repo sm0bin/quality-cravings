@@ -4,5 +4,5 @@ brandName
 type
 price
 rating
-productDescription
+shortDescription
 Add button

@@ -1,19 +1,22 @@
 import Swal from "sweetalert2";
+import { useLoaderData } from "react-router-dom";
 
 const AddProduct = () => {
+    const loadedBrands = useLoaderData();
 
     const handleAddProduct = e => {
         e.preventDefault();
         const form = e.currentTarget;
-
+        const brandInfo = form.brandName.value.split(',');
         const newProduct = {
             name: form.name.value,
             imageUrl: form.imageUrl.value,
-            brandName: form.brandName.value,
+            brandId: parseInt(brandInfo[0]),
+            brandName: brandInfo[1],
             type: form.type.value,
             price: form.price.value,
             rating: form.rating.value,
-            productDescription: form.productDescription.value,
+            shortDescription: form.shortDescription.value,
         }
         console.log(newProduct);
 
@@ -32,7 +35,7 @@ const AddProduct = () => {
                     'Product Added Successfully',
                     'success'
                 )
-                form.reset();
+                // form.reset();
             })
             .catch(err => console.log(err));
     }
@@ -65,7 +68,16 @@ const AddProduct = () => {
                                     <label className="label">
                                         <span className="label-text font-bold">Brand Name</span>
                                     </label>
-                                    <input type="text" name="brandName" placeholder="Brand Name" className="input input-bordered" required />
+                                    <select name="brandName" className="input input-bordered">
+                                        {
+                                            loadedBrands.map((brand, index) => (
+                                                <option key={index} value={[brand._id, brand.name]} data-key={brand._id}>{brand.name}</option>
+                                            ))
+                                        }
+                                    </select>
+                                    {/* <Select options={options} name="brandName" styles={{ padding: "1rem" }} required /> */}
+
+                                    {/* <input type="text" name="brandName" placeholder="Brand Name" className="input input-bordered" required /> */}
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -90,7 +102,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Product Description</span>
                                 </label>
-                                <input type="text" name="productDescription" placeholder="Product Description" className="input input-bordered" required />
+                                <input type="text" name="shortDescription" placeholder="Product Description" className="input input-bordered" required />
                             </div>
 
                             <div className="form-control mt-6">
