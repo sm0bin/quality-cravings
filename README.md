@@ -12,4 +12,4 @@ Welcome to the Quality Cravings website repository on GitHub! This project is de
 
 ## Live Website
 
-You can access the live Quality Cravings website by following this link: [Quality Cravings](https://www.qualitycravings.com)
+You can access the live Quality Cravings website by following this link: [Quality Cravings](https://brandshop-2e126.web.app/)
