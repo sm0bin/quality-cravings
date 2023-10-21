@@ -1,5 +1,5 @@
 import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -41,7 +41,7 @@ const BrandProducts = () => {
 
     console.log(loadedProducts);
     return (
-        <div className="">
+        <div className=" mx-4 md:mx-8 max-w-7xl lg:mx-auto">
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -64,7 +64,7 @@ const BrandProducts = () => {
 
             </Swiper>
 
-            <h2 className="font-bold text-5xl text-center mt-32 mb-16">{loadedProducts.name} Brand Products</h2>
+            <h2 className="font-bold text-5xl text-center mb-12 mt-16">{loadedProducts.name} Brand Products</h2>
 
             {
                 loadedProducts.length === 0 ?

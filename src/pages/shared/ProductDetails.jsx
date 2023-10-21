@@ -1,9 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ProductDetails = () => {
     const loadedProduct = useLoaderData();
 
-    const { _id, name, imageUrl, brandName, type, rating, price, shortDescription } = loadedProduct;
+    const { _id, name, imageUrl, brandId, brandName, type, rating, price, shortDescription } = loadedProduct;
 
     const handleAddToCart = (id) => {
         console.log('Add to cart clicked', id);
@@ -19,7 +19,7 @@ const ProductDetails = () => {
                     <h2 className="card-title font-bold text-4xl mb-3">{name}</h2>
                     <h2 className="card-title text-3xl"><span className="font-bold">Price: </span>${price}</h2>
                     <h2 className="card-title">
-                        <span className="font-bold">Brand: </span><span className="font-semibold rounded-full px-3 py-1 border-2 ">{brandName}</span>
+                        <span className="font-bold">Brand: </span><Link to={`/brands/${brandId}`} className="font-semibold rounded-full px-3 py-1 border-2 ">{brandName}</Link>
                     </h2>
                     <h2 className="card-title"><span className="font-bold">Category: </span>{type}</h2>
                     <h2 className="card-title"><span className="font-bold">Rating: </span>{rating}</h2>

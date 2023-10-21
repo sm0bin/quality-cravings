@@ -58,9 +58,9 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5500/products/${params.productId}`),
       },
       {
-        path: "/cart/:userId",
+        path: "/cart",
         element: <Cart></Cart>,
-        loader: ({ params }) => fetch(`http://localhost:5500/users/${params.userId}`),
+        // loader: ({ params }) => fetch(`http://localhost:5500/users/${params.userId}`),
       }
     ]
   },

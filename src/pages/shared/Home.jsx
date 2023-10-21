@@ -6,10 +6,10 @@ const Home = () => {
     const loadedBrands = useLoaderData();
     return (
         <div>
-            <section className="hero min-h-screen" style={{ backgroundImage: 'url("https://source.unsplash.com/burger-with-fries-8l8Yl2ruUsg/1920x1080")' }}>
+            <section className="hero min-h-screen bg-[url('/pizza.jpg')]">
                 <div className="hero-overlay bg-orange-600/10"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="">
+                <div className="hero-content w-full text-neutral-content">
+                    <div className="w-full">
                         <h1 className="mb-5 text-5xl font-bold">Welcome to Quality Cravings</h1>
                         <p className="mb-5 text-xl">Your Destination for Premium Food and Beverages.</p>
                         <Link to="/login">

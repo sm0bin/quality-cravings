@@ -17,7 +17,6 @@ const Cart = () => {
             {
                 user?.cartItems?.length ?
 
-
                     <div className="max-w-7xl mx-4 md:mx-8 lg:mx-auto overflow-x-auto">
                         <table className="table  text-xl">
                             {/* head */}

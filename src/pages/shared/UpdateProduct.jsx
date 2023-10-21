@@ -100,7 +100,7 @@ const UpdateProduct = () => {
                                     <label className="label">
                                         <span className="label-text font-bold">Brand Name</span>
                                     </label>
-                                    <select onChange={handleBrandSelect} name="brandName" defaultValue={selectedBrand} className="input input-bordered select select-success">
+                                    <select onChange={handleBrandSelect} name="brandName" defaultValue={selectedBrand.toString()} className="input input-bordered select select-success">
                                         <option disabled selected hidden>{brandName}</option>
                                         {
                                             loadedBrands.map((brand, index) => (

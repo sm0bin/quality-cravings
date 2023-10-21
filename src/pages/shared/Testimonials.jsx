@@ -1,45 +1,18 @@
 import { ChevronLeft, ChevronRight } from "react-bootstrap-icons"
 import useEmblaCarousel from "embla-carousel-react"
-import { useCallback } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 export const Testimonials = () => {
-    const testimonials = [
-        {
-            author: "Sarah Smith",
-            authorImg: "https://source.unsplash.com/rDEOVtE7vOs/500x500",
-            testimonial:
-                "Quality Cravings is my go-to for premium food and beverages from top brands. The selection is impeccable, and the service is top-notch.",
-            authorMetadata: "Food Critic",
-        },
-        {
-            author: "David Johnson",
-            authorImg: "https://source.unsplash.com/v2aKnjMbP_k/500x500",
-            testimonial:
-                "I can't get enough of the gourmet delights at Quality Cravings. It's a paradise for food enthusiasts. I recommend it to everyone!",
-            authorMetadata: "Culinary Expert",
-        },
-        {
-            author: "Linda Williams",
-            authorImg: "https://source.unsplash.com/rDEOVtE7vOs/500x500",
-            testimonial:
-                "Quality Cravings offers a unique range of premium snacks and beverages. I'm constantly impressed by the quality and variety they provide.",
-            authorMetadata: "Food Blogger",
-        },
-        {
-            author: "Robert Miller",
-            authorImg: "https://source.unsplash.com/v2aKnjMbP_k/500x500",
-            testimonial:
-                "This is the place to satisfy your gourmet desires. Quality Cravings never disappoints. The service is exceptional, and the products are top-tier.",
-            authorMetadata: "Food Connoisseur",
-        },
-        {
-            author: "William Davis",
-            authorImg: "https://source.unsplash.com/pUhxoSapPFA/500x500",
-            testimonial:
-                "As a chef, I appreciate the premium ingredients available at Quality Cravings. It's my secret to creating extraordinary dishes.",
-            authorMetadata: "Chef de Cuisine",
-        },
-    ];
+    const [testimonials, setTestimonials] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5500/testimonials')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setTestimonials(data);
+            })
+    }, []);
 
 
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 24 })
