@@ -25,7 +25,7 @@ export const Testimonials = () => {
 
     return (
         <section className="my-32 max-w-7xl mx-4 md:mx-8 lg:mx-auto">
-            <h1 className="mb-16 font-bold text-5xl text-gray-800 text-center">
+            <h1 className="mb-16 font-bold text-5xl text-center">
                 What Our Clients Say
             </h1>
 
@@ -33,8 +33,8 @@ export const Testimonials = () => {
                 <div className="embla__container flex flex-row  mx-4 md:mx-0">
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="embla__slide flex-[0_0_33%] md:flex-[0_0_32%] mr-4 min-w-0
-                        bg-white shadow-sm border-solid border-2 border-gray-200 rounded-2xl flex">
-                            <div className="w-full flex flex-col flex-grow bg-white px-6 py-6 rounded-2xl">
+                        bg-white dark:bg-gray-800 shadow-sm border-solid border-2 border-gray-200 rounded-2xl flex">
+                            <div className="w-full flex flex-col flex-grow bg-white dark:bg-gray-800 px-6 py-6 rounded-2xl">
                                 <div className="flex-grow">
                                     <p className="text-slate-600 leading-relaxed">
                                         {testimonial.testimonial}

@@ -53,8 +53,8 @@ const ProductDetails = () => {
 
     return (
         <div className=" my-32">
-            <h2 className="font-bold text-5xl text-center mb-16">Product Details</h2>
-            <div className="flex flex-row bg-base-100 shadow border rounded-2xl overflow-hidden mx-4 md:mx-8 lg:mx-auto max-w-7xl">
+            <h2 className="font-bold text-5xl text-center mb-16 dark:text-gray-300">Product Details</h2>
+            <div className="flex flex-col md:flex-row bg-base-100 shadow border rounded-2xl overflow-hidden mx-4 md:mx-8 lg:mx-auto max-w-7xl">
                 <figure><img className="h-96" src={imageUrl} alt={`${name} Image`} /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold text-4xl mb-3">{name}</h2>

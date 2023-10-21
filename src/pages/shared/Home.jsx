@@ -21,7 +21,7 @@ const Home = () => {
 
             <section className=" my-32">
 
-                <h2 className="font-bold text-5xl text-center mb-16">Top Brands</h2>
+                <h2 className="font-bold text-5xl text-center mb-16 dark:text-gray-300">Top Brands</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 max-w-7xl lg:mx-auto gap-6">
                     {
                         loadedBrands.map(brand => (
@@ -31,7 +31,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="relative my-32 mx-4 md:mx-8 max-w-7xl lg:mx-auto p-12 rounded-2xl bg-cover object-right bg-[url('https://source.unsplash.com/burger-with-lettuce-and-cheese-on-black-wooden-board-3UmTH5x2guQ/1280x400')]">
+            <section className="overflow-hidden relative my-32 mx-4 md:mx-8 max-w-7xl lg:mx-auto p-12 rounded-2xl bg-cover object-right bg-[url('https://source.unsplash.com/burger-with-lettuce-and-cheese-on-black-wooden-board-3UmTH5x2guQ/1280x400')]">
                 <h2 className="text-white font-bold text-3xl">Authentic Products from Top Brands at Affordable Prices</h2>
                 <h4 className="text-white font-medium text-xl mt-3 mb-6">Enjoy Free Delivery on Your First Purchase</h4>
 

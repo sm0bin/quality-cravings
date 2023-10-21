@@ -75,7 +75,7 @@ const BrandProducts = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-1 mb-32 mx-4 md:mx-8 max-w-7xl lg:mx-auto gap-6">
                         {loadedProducts.map(product => (
-                            <div key={product._id} className="flex flex-row bg-base-100 shadow border rounded-2xl overflow-hidden">
+                            <div key={product._id} className="flex flex-col md:flex-row bg-base-100 shadow border rounded-2xl overflow-hidden">
                                 <figure><img className="h-96 w-full object-cover" src={product.imageUrl} alt={`${product.name} Image`} /></figure>
                                 <div className="card-body ">
                                     <h2 className="card-title font-bold text-4xl mb-3">{product.name}</h2>
