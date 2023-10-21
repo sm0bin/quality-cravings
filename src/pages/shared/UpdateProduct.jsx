@@ -1,50 +1,73 @@
-import { useLoaderData } from "react-router-dom";
+
 import Swal from "sweetalert2";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const UpdateProduct = () => {
     const loadedProduct = useLoaderData();
+    const [loadedBrands, setLoadedBrands] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch("http://localhost:5500/brands")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setLoadedBrands(data);
+            })
+    }, []);
+
     const {
         _id,
         name,
         imageUrl,
         brandName,
+        brandId,
         type,
         price,
         rating,
-        shortDescription,
+        shortDescription
     } = loadedProduct;
+    const [selectedBrand, setSelectedBrand] = useState([brandId, brandName]);
+
+    const handleBrandSelect = e => {
+        const brandInfo = e.currentTarget.value.split(',');
+        setSelectedBrand([brandInfo[0], brandInfo[1]]);
+    }
 
     const handleUpdateProduct = e => {
         e.preventDefault();
         const form = e.currentTarget;
-
-        const updateProduct = {
+        // const brandInfo = form.brandName.value.split(',');
+        const newProduct = {
             name: form.name.value,
             imageUrl: form.imageUrl.value,
-            brandName: form.brandName.value,
+            brandId: parseInt(selectedBrand[0]),
+            brandName: selectedBrand[1],
             type: form.type.value,
             price: form.price.value,
             rating: form.rating.value,
             shortDescription: form.shortDescription.value,
         }
-        console.log(updateProduct);
+        console.log(newProduct);
 
-        fetch(`http://localhost:5500/products/${_id}`, {
-            method: 'POST',
+        fetch(`http://localhost:5500/products/${_id}/edit`, {
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(updateProduct)
+            body: JSON.stringify(newProduct)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 Swal.fire(
                     'Success',
-                    'Product Added Successfully',
+                    'Product Updated Successfully',
                     'success'
                 )
-                form.reset();
+                // form.reset();
+                navigate(`/products/${_id}`);
             })
             .catch(err => console.log(err));
     }
@@ -77,7 +100,14 @@ const UpdateProduct = () => {
                                     <label className="label">
                                         <span className="label-text font-bold">Brand Name</span>
                                     </label>
-                                    <input type="text" name="brandName" defaultValue={brandName} placeholder="Brand Name" className="input input-bordered" required />
+                                    <select onChange={handleBrandSelect} name="brandName" defaultValue={selectedBrand} className="input input-bordered select select-success">
+                                        <option disabled selected hidden>{brandName}</option>
+                                        {
+                                            loadedBrands.map((brand, index) => (
+                                                <option key={index} value={[brand._id, brand.name]}>{brand.name}</option>
+                                            ))
+                                        }
+                                    </select>
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -118,11 +148,3 @@ const UpdateProduct = () => {
 };
 
 export default UpdateProduct;
-// Image
-// Name
-// Brand Name
-// Type
-// Price
-// Short Description
-// Rating
-// Add button

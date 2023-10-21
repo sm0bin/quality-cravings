@@ -35,7 +35,7 @@ const AddProduct = () => {
                     'Product Added Successfully',
                     'success'
                 )
-                // form.reset();
+                form.reset();
             })
             .catch(err => console.log(err));
     }
@@ -68,16 +68,14 @@ const AddProduct = () => {
                                     <label className="label">
                                         <span className="label-text font-bold">Brand Name</span>
                                     </label>
-                                    <select name="brandName" className="input input-bordered">
+                                    <select name="brandName" className="input input-bordered  select select-success">
+                                        <option disabled selected hidden>Select Product Brand</option>
                                         {
                                             loadedBrands.map((brand, index) => (
-                                                <option key={index} value={[brand._id, brand.name]} data-key={brand._id}>{brand.name}</option>
+                                                <option key={index} value={[brand._id, brand.name]}>{brand.name}</option>
                                             ))
                                         }
                                     </select>
-                                    {/* <Select options={options} name="brandName" styles={{ padding: "1rem" }} required /> */}
-
-                                    {/* <input type="text" name="brandName" placeholder="Brand Name" className="input input-bordered" required /> */}
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -118,11 +116,3 @@ const AddProduct = () => {
 };
 
 export default AddProduct;
-// Image
-// Name
-// Brand Name
-// Type
-// Price
-// Short Description
-// Rating
-// Add button
