@@ -21,7 +21,7 @@ const BrandProducts = () => {
 
     console.log(brandId, typeof (brandId));
     useEffect(() => {
-        fetch(`http://localhost:5500/brands/${brandId}`)
+        fetch(`https://brandshop-server-red.vercel.app/brands/${brandId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
