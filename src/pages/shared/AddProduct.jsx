@@ -49,7 +49,7 @@ const AddProduct = () => {
                     <h2 className="font-bold text-5xl text-center mb-12">Add Product</h2>
                     <div className="card flex-shrink-0 w-full shadow border bg-base-100">
                         <form onSubmit={handleAddProduct} className="card-body ">
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
 
                                 <div className="form-control">

@@ -26,7 +26,7 @@ const Header = () => {
         </li>
     </>
     return (
-        <div className="navbar bg-base-100 sticky top-0 z-50 shadow">
+        <div className="navbar bg-base-100 sticky top-0 z-50 shadow px-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,13 +46,15 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user ?
-                        <div className="flex items-center gap-3">
-                            <div className="avatar">
-                                <div className="w-12 mask mask-squircle">
-                                    <img src={user.photoURL} />
+                        <div className="md:flex items-center gap-3">
+                            <div className="hidden md:flex items-center gap-3">
+                                <div className="avatar">
+                                    <div className="w-12 mask mask-squircle">
+                                        <img src={user.photoURL} />
+                                    </div>
                                 </div>
+                                <h3 className="font-semibold text-xl">{user.displayName}</h3>
                             </div>
-                            <h3 className="font-semibold text-xl">{user.displayName}</h3>
                             <button onClick={handleLogout} className="btn btn-neutral">Logout</button>
                         </div>
                         :
