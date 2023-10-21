@@ -1,13 +1,54 @@
+import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
     const loadedProduct = useLoaderData();
+    const { user } = useContext(AuthContext);
+    const [loadedUser, setLoadedUser] = useState({});
+    // console.log(user?.email);
+    useEffect(() => {
+        fetch(`http://localhost:5500/users/${user?.email}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setLoadedUser(data);
+            })
+    }, [user?.email])
+
 
     const { _id, name, imageUrl, brandId, brandName, type, rating, price, shortDescription } = loadedProduct;
 
-    const handleAddToCart = (id) => {
-        console.log('Add to cart clicked', id);
+    const handleAddToCart = (productId) => {
+        console.log('Add to cart clicked', productId);
+        let cartItems = [];
 
+
+        if (loadedUser?.cartItems) {
+            cartItems = loadedUser.cartItems;
+        }
+
+        cartItems.push(productId);
+
+        fetch(`http://localhost:5500/users/${user?.email}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ cartItems })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount) {
+                    Swal.fire(
+                        'Success',
+                        'Product Added to Cart',
+                        'success'
+                    )
+                }
+            })
     }
 
     return (
@@ -26,7 +67,6 @@ const ProductDetails = () => {
                     <p className="text-lg"><span className="font-bold">Details: </span>{shortDescription}</p>
                     <div className="card-actions">
                         <button onClick={() => handleAddToCart(_id)} className="btn btn-neutral">Add to Cart</button>
-                        {/* <button onClick={handleUpdate} className="btn btn-neutral">Update</button> */}
                     </div>
                 </div>
             </div>
