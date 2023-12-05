@@ -9,7 +9,7 @@ const UpdateProduct = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("https://brandshop-server-red.vercel.app/brands")
+        fetch("https://quality-cravings.vercel.app/brands")
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -51,7 +51,7 @@ const UpdateProduct = () => {
         }
         console.log(newProduct);
 
-        fetch(`https://brandshop-server-red.vercel.app/products/${_id}/edit`, {
+        fetch(`https://quality-cravings.vercel.app/products/${_id}/edit`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

@@ -20,7 +20,7 @@ const AddProduct = () => {
         }
         console.log(newProduct);
 
-        fetch('https://brandshop-server-red.vercel.app/products/', {
+        fetch('https://quality-cravings.vercel.app/products/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -54,7 +54,7 @@ const SignUp = () => {
                         setSignUpError(error.message);
                     })
 
-                fetch("https://brandshop-server-red.vercel.app/users", {
+                fetch("https://quality-cravings.vercel.app/users", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(newUser),

@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [loadedUser, setLoadedUser] = useState({});
     // console.log(user?.email);
     useEffect(() => {
-        fetch(`https://brandshop-server-red.vercel.app/users/${user?.email}`)
+        fetch(`https://quality-cravings.vercel.app/users/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -31,7 +31,7 @@ const ProductDetails = () => {
 
         cartItems.push(productId);
 
-        fetch(`https://brandshop-server-red.vercel.app/users/${user?.email}`, {
+        fetch(`https://quality-cravings.vercel.app/users/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
