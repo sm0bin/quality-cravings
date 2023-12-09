@@ -10,6 +10,20 @@ Welcome to the Quality Cravings website repository on GitHub! This project is de
 - User registration and login system for a personalized experience.
 - Google sign-in integration for quick access with your Google account.
 
+## Technology
+
+### Frontend
+
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind)](https://skillicons.dev)
+
+### Backend
+
+[![My Skills](https://skillicons.dev/icons?i=nodejs,express,mongodb)](https://skillicons.dev)
+
+### Authentication
+
+[![My Skills](https://skillicons.dev/icons?i=firebase)](https://skillicons.dev)
+
 ## Links
 
 - Live Website: [Quality Cravings](https://brandshop-2e126.web.app/).
