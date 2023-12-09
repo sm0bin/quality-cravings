@@ -10,6 +10,7 @@ Welcome to the Quality Cravings website repository on GitHub! This project is de
 - User registration and login system for a personalized experience.
 - Google sign-in integration for quick access with your Google account.
 
-## Live Website
+## Links
 
-You can access the live Quality Cravings website by following this link: [Quality Cravings](https://brandshop-2e126.web.app/)
+- Live Website: [Quality Cravings](https://brandshop-2e126.web.app/).
+- Server Side Repository: [Quality Cravings Server](https://github.com/sm0bin/quality-cravings-server).
