@@ -24,7 +24,7 @@ const Home = () => {
                 <h2 className="font-bold text-5xl text-center mb-16 dark:text-gray-300">Top Brands</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 max-w-7xl lg:mx-auto gap-6">
                     {
-                        loadedBrands.map(brand => (
+                        loadedBrands?.map(brand => (
                             <BrandCard key={brand._id} brand={brand} ></BrandCard>
                         ))
                     }

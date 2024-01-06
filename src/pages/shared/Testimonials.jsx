@@ -6,7 +6,7 @@ export const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
 
     useEffect(() => {
-        fetch('https://quality-cravings.vercel.app/testimonials')
+        fetch('http://localhost:5500/testimonials')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

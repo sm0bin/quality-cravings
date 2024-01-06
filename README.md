@@ -26,5 +26,5 @@ Welcome to the Quality Cravings website repository on GitHub! This project is de
 
 ## Links
 
-- Live Website: [Quality Cravings](https://brandshop-2e126.web.app/).
+- Live Website: [Quality Cravings](https://quality-cravings.web.app).
 - Server Side Repository: [Quality Cravings Server](https://github.com/sm0bin/quality-cravings-server).
