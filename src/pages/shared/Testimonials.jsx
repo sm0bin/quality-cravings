@@ -33,10 +33,10 @@ export const Testimonials = () => {
                 <div className="embla__container flex flex-row  mx-4 md:mx-0">
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="embla__slide flex-[0_0_33%] md:flex-[0_0_32%] mr-4 min-w-0
-                        bg-white dark:bg-gray-800 shadow-sm border-solid border-2 border-gray-200 rounded-2xl flex">
-                            <div className="w-full flex flex-col flex-grow bg-white dark:bg-gray-800 px-6 py-6 rounded-2xl">
+                        bg-base-100  shadow-sm border-solid border rounded-2xl flex overflow-hidden">
+                            <div className="w-full flex flex-col flex-grow px-6 py-6">
                                 <div className="flex-grow">
-                                    <p className="text-slate-600 leading-relaxed">
+                                    <p className=" leading-relaxed">
                                         {testimonial.testimonial}
                                     </p>
                                 </div>
@@ -46,7 +46,7 @@ export const Testimonials = () => {
                                         <h2 className="font-semibold text-base">
                                             {testimonial.author}
                                         </h2>
-                                        <p className="text-gray-600">
+                                        <p className="">
                                             {testimonial.authorMetadata}
                                         </p>
                                     </div>
@@ -61,7 +61,7 @@ export const Testimonials = () => {
                 <div>
                     <button
                         type="button"
-                        className="mr-4 text-gray-700 border border-gray-700 hover:bg-gray-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center 
+                        className="mr-4 border border-gray-700 hover:bg-gray-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center 
              "
                         onClick={scrollPrev}
                     >
