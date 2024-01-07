@@ -1,0 +1,223 @@
+[
+    {
+      "name": "Cadbury Dairy Milk",
+      "brandId": ObjectId("65999b4cde7af91b071748ee"),
+      "brandName": "Cadbury",
+      "type": "Chocolate",
+      "price": 1.99,
+      "rating": 4.7,
+      "shortDescription": "Creamy and delicious milk chocolate bar.",
+      "imageUrl": "https://source.unsplash.com/an-oreo-cookie-and-rose-petals-on-a-white-background-g2ur73mpZ9o/500x500"
+    },
+    {
+      "name": "Cadbury Caramel",
+      "brandId": ObjectId("65999b4cde7af91b071748ee"),
+      "brandName": "Cadbury",
+      "type": "Chocolate",
+      "price": 2.49,
+      "rating": 4.5,
+      "shortDescription": "Smooth milk chocolate with a soft caramel center.",
+      "imageUrl": "https://source.unsplash.com/four-pieces-of-chocolate-sitting-on-top-of-a-table-wntFdvFPu5I/500x500"
+    },
+    {
+      "name": "Cadbury Oreo",
+      "brandId": ObjectId("65999b4cde7af91b071748ee"),
+      "brandName": "Cadbury",
+      "type": "Chocolate",
+      "price": 2.29,
+      "rating": 4.6,
+      "shortDescription": "Cadbury Dairy Milk with Oreo cookie pieces.",
+      "imageUrl": "https://source.unsplash.com/blue-and-yellow-plastic-pack-tkUMZUHgDSU/500x500"
+    },
+    {
+      "name": "Cadbury Fruit & Nut",
+      "brandId": ObjectId("65999b4cde7af91b071748ee"),
+      "brandName": "Cadbury",
+      "type": "Chocolate",
+      "price": 2.99,
+      "rating": 4.4,
+      "shortDescription": "Delicious milk chocolate with raisins and almonds.",
+      "imageUrl": "https://source.unsplash.com/sliced-avocado-beside-sliced-bread-and-sliced-cucumber-uBN0UB6INb0/500x500"
+    },
+    {
+      "name": "Coca-Cola Classic",
+      "brandId": ObjectId("65999b4cde7af91b071748ef"),
+      "brandName": "Coca-Cola",
+      "type": "Soft Drink",
+      "price": 1.49,
+      "rating": 4.8,
+      "shortDescription": "The classic and refreshing cola.",
+      "imageUrl": "https://source.unsplash.com/person-holding-350-ml-clear-glass-coca-cola-soda-bottle-YrZSDpG9IaI/500x500"
+    },
+    {
+      "name": "Coca-Cola Diet",
+      "brandId": ObjectId("65999b4cde7af91b071748ef"),
+      "brandName": "Coca-Cola",
+      "type": "Soft Drink",
+      "price": 2.29,
+      "rating": 4.6,
+      "shortDescription": "Sugar-free, low-calorie cola for a lighter choice.",
+      "imageUrl": "https://source.unsplash.com/diet-coke-can-lAgnkVogtfo/500x500"
+    },
+    {
+      "name": "Coca-Cola Zero Sugar",
+      "brandId": ObjectId("65999b4cde7af91b071748ef"),
+      "brandName": "Coca-Cola",
+      "type": "Soft Drink",
+      "price": 1.39,
+      "rating": 4.7,
+      "shortDescription": "Same great taste with zero sugar.",
+      "imageUrl": "https://source.unsplash.com/coca-cola-zero-sugar-soda-can-lzH89FCH3Ts/500x500"
+    },
+    {
+      "name": "Coca-Cola Plus Coffee",
+      "brandId": ObjectId("65999b4cde7af91b071748ef"),
+      "brandName": "Coca-Cola",
+      "type": "Soft Drink",
+      "price": 1.59,
+      "rating": 4.5,
+      "shortDescription": "Cola with a hint of coffee flavor.",
+      "imageUrl": "https://source.unsplash.com/coca-cola-can-on-brown-wooden-table-Db5j3DJL0YI/500x500"
+    },
+    {
+      "name": "Hot & Crispy Chicken",
+      "brandId": ObjectId("65999b4cde7af91b071748f0"),
+      "brandName": "KFC",
+      "type": "Fried Chicken",
+      "price": 5.99,
+      "rating": 4.9,
+      "shortDescription": "Crispy, seasoned fried chicken.",
+      "imageUrl": "https://source.unsplash.com/a-couple-of-trays-of-food-on-a-table-WqylFQacnqE/500x500"
+    },
+    {
+      "name": "KFC Zinger Burger",
+      "brandId": ObjectId("65999b4cde7af91b071748f0"),
+      "brandName": "KFC",
+      "type": "Burger",
+      "price": 4.99,
+      "rating": 4.7,
+      "shortDescription": "Spicy chicken fillet in a bun.",
+      "imageUrl": "https://source.unsplash.com/kfc-hamburger-and-box-xn2DIp6Z8Jk/500x500"
+    },
+    {
+      "name": "KFC Mashed Potatoes",
+      "brandId": ObjectId("65999b4cde7af91b071748f0"),
+      "brandName": "KFC",
+      "type": "Side Dish",
+      "price": 2.49,
+      "rating": 4.5,
+      "shortDescription": "Creamy mashed potatoes with gravy.",
+      "imageUrl": "https://source.unsplash.com/brown-wooden-spoon-on-blue-ceramic-bowl-zEBe2beserI/500x500"
+    },
+    {
+      "name": "KFC Coleslaw",
+      "brandId": ObjectId("65999b4cde7af91b071748f0"),
+      "brandName": "KFC",
+      "type": "Side Dish",
+      "price": 1.99,
+      "rating": 4.4,
+      "shortDescription": "Classic coleslaw with a tangy twist.",
+      "imageUrl": "https://source.unsplash.com/vegetable-salad-on-plate-qfgY-9_5JxU/500x500"
+    },
+    {
+      "name": "Pepsi",
+      "brandId": ObjectId("65999b4cde7af91b071748f1"),
+      "brandName": "PepsiCo",
+      "type": "Soft Drink",
+      "price": 1.49,
+      "rating": 4.6,
+      "shortDescription": "Refreshing cola with a hint of citrus.",
+      "imageUrl": "https://source.unsplash.com/pepsi-can-lot-xYSp0kkIUio/500x500"
+    },
+    {
+      "name": "Doritos",
+      "brandId": ObjectId("65999b4cde7af91b071748f1"),
+      "brandName": "PepsiCo",
+      "type": "Snack",
+      "price": 2.29,
+      "rating": 4.5,
+      "shortDescription": "Bold and crunchy tortilla chips.",
+      "imageUrl": "https://source.unsplash.com/green-and-yellow-plastic-pack-jf15-wy_Mow/500x500"
+    },
+    {
+      "name": "Lay's Potato Chips",
+      "brandId": ObjectId("65999b4cde7af91b071748f1"),
+      "brandName": "PepsiCo",
+      "type": "Snack",
+      "price": 1.99,
+      "rating": 4.7,
+      "shortDescription": "Classic potato chips for snacking.",
+      "imageUrl": "https://source.unsplash.com/clear-drinking-glass-beside-brown-bread-on-blue-ceramic-plate-GiTJpq74ER0/500x500"
+    },
+    {
+      "name": "Gatorade",
+      "brandId": ObjectId("65999b4cde7af91b071748f1"),
+      "brandName": "PepsiCo",
+      "type": "Sports Drink",
+      "price": 1.79,
+      "rating": 4.8,
+      "shortDescription": "Hydration and electrolytes for active lifestyles.",
+      "imageUrl": "https://source.unsplash.com/a-bunch-of-orange-and-green-cans-sitting-on-top-of-a-red-table-yKgniZUxPmc/500x500"
+    },
+    {
+      "name": "Starbucks Coffee",
+      "brandId": ObjectId("65999b4cde7af91b071748f2"),
+      "brandName": "Starbucks",
+      "type": "Coffee",
+      "price": 3.49,
+      "rating": 4.5,
+      "shortDescription": "Rich and aromatic coffee brewed to perfection.",
+      "imageUrl": "https://source.unsplash.com/person-holding-white-and-brown-disposable-cup-nXNpIyTt3Ac/500x500"
+    },
+    {
+      "name": "Starbucks Caramel Macchiato",
+      "brandId": ObjectId("65999b4cde7af91b071748f2"),
+      "brandName": "Starbucks",
+      "type": "Coffee",
+      "price": 4.29,
+      "rating": 4.8,
+      "shortDescription": "Espresso with steamed milk and caramel drizzle.",
+      "imageUrl": "https://source.unsplash.com/person-holding-brown-and-white-disposable-cup-ppfo82YF50g/500x500"
+    },
+    {
+      "name": "Starbucks Frappuccino",
+      "brandId": ObjectId("65999b4cde7af91b071748f2"),
+      "brandName": "Starbucks",
+      "type": "Coffee",
+      "price": 4.99,
+      "rating": 4.6,
+      "shortDescription": "Iced and blended coffee with a variety of flavors.",
+      "imageUrl": "https://source.unsplash.com/a-cup-with-a-straw-and-a-straw-qm4neFqCB9Q/500x500"
+    },
+    {
+      "name": "Cheetos",
+      "imageUrl": "https://source.unsplash.com/cheetos-baked-chip-bag-lot-GEpzcRu5QGA/500x500",
+      "brandId": ObjectId("65999b4cde7af91b071748f1"),
+      "brandName": "PepsiCo",
+      "type": "Snack",
+      "price": 1.29,
+      "rating": 4.4,
+      "shortDescription": "Baked chips with 50% less fat."
+    },
+    {
+      "name": "Iced Matcha Latte",
+      "imageUrl": "https://source.unsplash.com/white-starbucks-plastic-cup-close-up-photography-AFJXm3ZWFdI/500x500",
+      "brandId": ObjectId("65999b4cde7af91b071748f2"),
+      "brandName": "Starbucks",
+      "type": "Coffee",
+      "price": 2.49,
+      "rating": 4.6,
+      "shortDescription": " Green has never tasted so good."
+    },
+    {
+      "name": "Nestle Crunch Chocolate",
+      "imageUrl": "https://source.unsplash.com/KIeHhgCK_p4",
+      "brandId": ObjectId("65999b4cde7af91b071748f3"),
+      "brandName": "Nestle",
+      "type": "Chocolate",
+      "price": 3.49,
+      "rating": 4.7,
+      "shortDescription": "Experience that famous crunch with the delicious taste of the Nestle Crunch!",
+      "__v": 0
+    }
+  ]

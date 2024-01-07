@@ -11,7 +11,7 @@ const AddProduct = () => {
         const newProduct = {
             name: form.name.value,
             imageUrl: form.imageUrl.value,
-            brandId: parseInt(brandInfo[0]),
+            brandId: brandInfo[0],
             brandName: brandInfo[1],
             type: form.type.value,
             price: form.price.value,
@@ -20,7 +20,7 @@ const AddProduct = () => {
         }
         console.log(newProduct);
 
-        fetch('http://localhost:5500/products/', {
+        fetch('https://quality-cravings.vercel.app/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

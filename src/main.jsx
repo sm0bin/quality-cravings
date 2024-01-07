@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5500/brands"),
+        loader: () => fetch("https://quality-cravings.vercel.app/brands"),
       },
       {
         path: "/login",
@@ -40,22 +40,22 @@ const router = createBrowserRouter([
       {
         path: "/products/new",
         element: <AddProduct></AddProduct>,
-        loader: () => fetch("http://localhost:5500/brands"),
+        loader: () => fetch("https://quality-cravings.vercel.app/brands"),
       },
       {
         path: "/brands/:brandId",
         element: <BrandProducts></BrandProducts>,
-        loader: ({ params }) => fetch(`http://localhost:5500/brands/${params.brandId}/products`),
+        loader: ({ params }) => fetch(`https://quality-cravings.vercel.app/brands/${params.brandId}/products`),
       },
       {
         path: "/products/:productId",
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5500/products/${params.productId}`),
+        loader: ({ params }) => fetch(`https://quality-cravings.vercel.app/products/${params.productId}`),
       },
       {
         path: "/products/:productId/edit",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5500/products/${params.productId}`),
+        loader: ({ params }) => fetch(`https://quality-cravings.vercel.app/products/${params.productId}`),
       },
       {
         path: "/cart",

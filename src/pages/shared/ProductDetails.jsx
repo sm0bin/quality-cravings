@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [loadedUser, setLoadedUser] = useState({});
     // console.log(user?.email);
     useEffect(() => {
-        fetch(`http://localhost:5500/users/${user?.email}`)
+        fetch(`https://quality-cravings.vercel.app/users/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -31,7 +31,7 @@ const ProductDetails = () => {
 
         cartItems.push(productId);
 
-        fetch(`http://localhost:5500/users/${user?.email}`, {
+        fetch(`https://quality-cravings.vercel.app/users/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,8 +40,8 @@ const ProductDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                if (data.modifiedCount) {
+                // console.log(data);
+                if (data) {
                     Swal.fire(
                         'Success',
                         'Product Added to Cart',
@@ -53,7 +53,7 @@ const ProductDetails = () => {
 
     return (
         <div className=" my-32">
-            <h2 className="font-bold text-5xl text-center mb-16 dark:text-gray-300">Product Details</h2>
+            <h2 className="font-bold text-5xl text-center mb-16">Product Details</h2>
             <div className="flex flex-col md:flex-row bg-base-100 shadow border rounded-2xl overflow-hidden mx-4 md:mx-8 lg:mx-auto max-w-7xl">
                 <figure><img className="h-96" src={imageUrl} alt={`${name} Image`} /></figure>
                 <div className="card-body">

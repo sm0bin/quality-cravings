@@ -21,7 +21,7 @@ const BrandProducts = () => {
 
     console.log(brandId, typeof (brandId));
     useEffect(() => {
-        fetch(`http://localhost:5500/brands/${brandId}`)
+        fetch(`https://quality-cravings.vercel.app/brands/${brandId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -64,7 +64,7 @@ const BrandProducts = () => {
 
             </Swiper>
 
-            <h2 className="font-bold text-5xl text-center mb-12 mt-16">{loadedProducts.name} Brand Products</h2>
+            <h2 className="font-bold text-5xl text-center mb-12 mt-16">{brand?.name} Products</h2>
 
             {
                 loadedProducts.length === 0 ?

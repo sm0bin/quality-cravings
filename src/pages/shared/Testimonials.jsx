@@ -6,10 +6,10 @@ export const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5500/testimonials')
+        fetch('https://quality-cravings.vercel.app/testimonials')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setTestimonials(data);
             })
     }, []);

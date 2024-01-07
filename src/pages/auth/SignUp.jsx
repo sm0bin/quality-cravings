@@ -54,7 +54,7 @@ const SignUp = () => {
                         setSignUpError(error.message);
                     })
 
-                fetch("http://localhost:5500/users", {
+                fetch("https://quality-cravings.vercel.app/users", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(newUser),

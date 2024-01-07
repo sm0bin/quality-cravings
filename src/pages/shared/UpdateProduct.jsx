@@ -9,7 +9,7 @@ const UpdateProduct = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:5500/brands")
+        fetch("https://quality-cravings.vercel.app/brands")
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -42,7 +42,7 @@ const UpdateProduct = () => {
         const newProduct = {
             name: form.name.value,
             imageUrl: form.imageUrl.value,
-            brandId: parseInt(selectedBrand[0]),
+            brandId: selectedBrand[0],
             brandName: selectedBrand[1],
             type: form.type.value,
             price: form.price.value,
@@ -51,7 +51,7 @@ const UpdateProduct = () => {
         }
         console.log(newProduct);
 
-        fetch(`http://localhost:5500/products/${_id}`, {
+        fetch(`https://quality-cravings.vercel.app/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
