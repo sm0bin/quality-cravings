@@ -11,7 +11,7 @@ const Cart = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`https://quality-cravings.vercel.app/users/${user?.email}`)
+        fetch(`http://localhost:5500/users/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setLoadedUserCart(data.cartItems);
@@ -20,7 +20,7 @@ const Cart = () => {
     }, [user?.email]);
 
     useEffect(() => {
-        fetch(`https://quality-cravings.vercel.app/products`)
+        fetch(`http://localhost:5500/products`)
             .then(res => res.json())
             .then(data => {
                 setLoadedProducts(data);
@@ -51,7 +51,7 @@ const Cart = () => {
             if (result.isConfirmed) {
                 const cartItems = loadedUserCart.filter((productId) => productId !== id);
                 setLoadedUserCart(cartItems);
-                fetch(`https://quality-cravings.vercel.app/users/${user?.email}`, {
+                fetch(`http://localhost:5500/users/${user?.email}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'

@@ -1,6 +1,6 @@
 import { Link, useRouteError } from "react-router-dom";
-import Footer from "./shared/Footer";
-import Header from "./shared/Header";
+import Header from "../shared/Header";
+import Footer from "../shared/Footer";
 
 export default function ErrorPage() {
     const error = useRouteError();

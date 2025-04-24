@@ -21,7 +21,7 @@ const BrandProducts = () => {
 
     console.log(brandId, typeof (brandId));
     useEffect(() => {
-        fetch(`https://quality-cravings.vercel.app/brands/${brandId}`)
+        fetch(`http://localhost:5500/brands/${brandId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
