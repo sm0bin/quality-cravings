@@ -58,7 +58,7 @@ const ProductDetails = () => {
                 <figure><img className="h-96" src={imageUrl} alt={`${name} Image`} /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold text-4xl mb-3">{name}</h2>
-                    <h2 className="card-title text-3xl"><span className="font-bold">Price: </span>${price}</h2>
+                    <h2 className="card-title text-3xl">Price: <span className="font-bold text-primary">{price}</span> Taka</h2>
                     <h2 className="card-title">
                         <span className="font-bold">Brand: </span><Link to={`/brands/${brandId}`} className="font-semibold rounded-full px-3 py-1 border-2 ">{brandName}</Link>
                     </h2>

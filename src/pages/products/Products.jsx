@@ -122,7 +122,7 @@ const Products = () => {
                             <div className="card-body">
                                 <h2 className="card-title text-2xl font-bold">{product.name}</h2>
                                 <div className="flex justify-between items-center">
-                                    <p className="font-bold text-xl">${product.price}</p>
+                                    <p className="font-bold text-xl text-gray-500">Price: <span className="text-primary">{product.price}</span> Taka</p>
                                     <div className="badge badge-outline">{product.brandName}</div>
                                 </div>
                                 <p className="text-sm mt-2">Category: {product.type}</p>

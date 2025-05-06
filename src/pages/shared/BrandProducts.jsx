@@ -79,7 +79,7 @@ const BrandProducts = () => {
                                 <figure><img className="h-96 w-full object-cover" src={product.imageUrl} alt={`${product.name} Image`} /></figure>
                                 <div className="card-body ">
                                     <h2 className="card-title font-bold text-4xl mb-3">{product.name}</h2>
-                                    <h2 className="card-title text-3xl"><span className="font-bold">Price: </span>${product.price}</h2>
+                                    <h2 className="card-title text-3xl">Price: <span className="font-bold text-primary">{product.price}</span> Taka</h2>
                                     <h2 className="card-title">
                                         <span className="font-bold">Brand: </span><span className="font-semibold rounded-full px-3 py-1 border-2 ">{product.brandName}</span>
                                     </h2>

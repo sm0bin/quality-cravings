@@ -124,7 +124,7 @@ const Cart = () => {
                                             </td>
                                             <td>{product.name}</td>
                                             <td>{product.brandName}</td>
-                                            <td>{product.price}</td>
+                                            <td>{product.price} Taka</td>
                                             <td>
                                                 <button onClick={() => handleRemoveFromCart(product._id)} className="p-2.5 rounded bg-rose-500 text-white hover:scale-110">
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
