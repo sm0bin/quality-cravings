@@ -6,7 +6,7 @@ export const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5500/testimonials')
+        fetch(`${import.meta.env.VITE_SERVER_URL}/testimonials`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

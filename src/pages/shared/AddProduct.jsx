@@ -20,7 +20,7 @@ const AddProduct = () => {
         }
         console.log(newProduct);
 
-        fetch('http://localhost:5500/products', {
+        fetch(`${import.meta.env.VITE_SERVER_URL}/products`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

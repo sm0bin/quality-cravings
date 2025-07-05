@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5500/brands"),
+        loader: () => fetch(`${import.meta.env.VITE_SERVER_URL}/brands`),
       },
       {
         path: "/login",
@@ -41,27 +41,27 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products></Products>,
-        loader: () => fetch("http://localhost:5500/products"),
+        loader: () => fetch(`${import.meta.env.VITE_SERVER_URL}/products`),
       },
       {
         path: "/products/new",
         element: <AddProduct></AddProduct>,
-        loader: () => fetch("http://localhost:5500/brands"),
+        loader: () => fetch(`${import.meta.env.VITE_SERVER_URL}/brands`),
       },
       {
         path: "/brands/:brandId",
         element: <BrandProducts></BrandProducts>,
-        loader: ({ params }) => fetch(`http://localhost:5500/brands/${params.brandId}/products`),
+        loader: ({ params }) => fetch(`${import.meta.env.VITE_SERVER_URL}/brands/${params.brandId}/products`),
       },
       {
         path: "/products/:productId",
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5500/products/${params.productId}`),
+        loader: ({ params }) => fetch(`${import.meta.env.VITE_SERVER_URL}/products/${params.productId}`),
       },
       {
         path: "/products/:productId/edit",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5500/products/${params.productId}`),
+        loader: ({ params }) => fetch(`${import.meta.env.VITE_SERVER_URL}/products/${params.productId}`),
       },
       {
         path: "/cart",

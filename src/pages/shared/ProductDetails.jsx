@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [loadedUser, setLoadedUser] = useState({});
     // console.log(user?.email);
     useEffect(() => {
-        fetch(`http://localhost:5500/users/${user?.email}`)
+        fetch(`${import.meta.env.VITE_SERVER_URL}/users/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -31,7 +31,7 @@ const ProductDetails = () => {
 
         cartItems.push(productId);
 
-        fetch(`http://localhost:5500/users/${user?.email}`, {
+        fetch(`${import.meta.env.VITE_SERVER_URL}/users/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

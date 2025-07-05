@@ -9,7 +9,7 @@ const UpdateProduct = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:5500/brands")
+        fetch(`${import.meta.env.VITE_SERVER_URL}/brands`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -51,7 +51,7 @@ const UpdateProduct = () => {
         }
         console.log(newProduct);
 
-        fetch(`http://localhost:5500/products/${_id}`, {
+        fetch(`${import.meta.env.VITE_SERVER_URL}/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
